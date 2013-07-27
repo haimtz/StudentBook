@@ -1,4 +1,6 @@
 <?php
+include_once './model/User.php';
 
-echo 'hello php!!!';
+$Obj = new User();
+echo $Obj->getUserName();
 ?>
