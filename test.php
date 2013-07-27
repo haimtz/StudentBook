@@ -3,15 +3,16 @@ include_once './Library/HTMLDefualt.php';
 ?>
 
 <?php
-if(true)
-{
-    header("Location: index.php");
-}
+
+
 start_page("This is a test");
 ?>
 
 <?php
-
+if(!isset($_SESSION['username']) && empty($_SESSION['username']))
+{
+    header("Location: index.php");
+}
 ?>
 
 in
