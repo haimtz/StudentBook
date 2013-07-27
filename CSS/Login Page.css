@@ -1,0 +1,12 @@
+
+div{
+    border: 1px  solid;
+    position: relative;
+    float: left;
+    margin: 2px 2px 2px 2px;
+    text-align: center;
+    width: 250px;
+    height: 100px;
+    font-family: Arial;
+}
+

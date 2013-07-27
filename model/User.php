@@ -5,6 +5,12 @@ class User
     private $userName;
     private $email;
     
+    public function __construct($userName, $email) {
+        
+        $this->setUserName($userName);
+        $this->setEmail($email);
+    }
+    
     
     public function setEmail($email)
     {
