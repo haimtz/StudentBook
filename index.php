@@ -4,13 +4,15 @@
 
 <?php
     start_page("Welcome");
+    session_start();
 ?>
 <link rel="stylesheet" href="CSS/Login Page.css" type="text/css">
 <div>
     Login<br>
-    <form action="" method="POST">
+    <form action="test.php" method="POST">
         username: <input type="text" name="username" placeholder="Enter username"><br>
         password: <input type="text" name="password" placeholder="Enter password"><br>
+        <input type="submit" value="Enter">
     </form>
 </div>
 <div>
