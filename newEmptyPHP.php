@@ -1,5 +1,7 @@
 <?php
-session_start();
+include_once './Library/HTMLDefualt.php';
+
+start_page("junck");
 
 if(isset($_SESSION['username']) )
 {
@@ -11,4 +13,6 @@ if(isset($_SESSION['username']) )
  {
      echo 'not empty<br>';
  }
+ 
+ end_page();
 ?>

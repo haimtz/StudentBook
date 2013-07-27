@@ -4,7 +4,6 @@
 
 <?php
     start_page("Welcome");
-    session_start();
 ?>
 <link rel="stylesheet" href="CSS/Login Page.css" type="text/css">
 <div>

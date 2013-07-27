@@ -3,8 +3,6 @@ include_once './Library/HTMLDefualt.php';
 ?>
 
 <?php
-
-session_start();
 start_page("This is a test");
 ?>
 
