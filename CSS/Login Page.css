@@ -1,12 +1,21 @@
 
-div{
+div.box{
     border: 1px  solid;
+    border-radius: 25px;
     position: relative;
     float: left;
     margin: 2px 2px 2px 2px;
     text-align: center;
     width: 250px;
-    height: 100px;
+    height: 120px;
     font-family: Arial;
 }
 
+div.title
+{
+   
+}
+
+input{
+    margin: 2px 2px 2px 2px;
+}
