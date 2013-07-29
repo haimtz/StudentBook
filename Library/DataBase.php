@@ -1,30 +1,21 @@
 <?php
         #mysqli_connect(host,username,password,dbname); 
-        
-        $connection;
-        
-        function connect()
+        class DataBase
         {
-            global $connection;
-            $host = "localhost:3306";
-            $username = "root";
-            $password = "1234";
-            $dabase_name = "sbdb";
+            private $connection = 1;
+            private $host =  "localhost:3306";
+            private $username = "root";
+            private $password = "1234";
+            private $dabase_name = "sbdb";
             
-            $connection = mysql_connect($host, $username, $password, $dabase_name);
-        }
-        
-        function close()
-        {
-            global $connection;
+            public function __construct() {
+                
+                $this->connection = mysql_connect($this->host, $this->username, $this->password, $this->dabase_name);
+            }
             
-            #$connection->close();
-        }
-        
-        function insert()
-        {
-            global $connection;
-            mysql_query('INSERT INTO users (username, email) VALUES ("abc33", "host@gmail.com")', $connection);
-            #$connection->query("INSERT INTO users (username, email) VALUES ('abc 2', 'host@gmail.com')")
+            public function insert($query)
+            {
+                mysql_query($query, $this->connection);
+            }
         }
 ?>
