@@ -17,6 +17,11 @@
 </div>
 <div class="box">
     <div class="title"> Register</div>
+    <br>
+    <div>
+        If you are interested in becoming a member of our site and enter Link Start browsing
+    </div>
+    <a href="register.php">Register here</a>
 </div>
 <?php
     end_page();
