@@ -11,11 +11,16 @@
             public function __construct() {
                 
                 $this->connection = mysql_connect($this->host, $this->username, $this->password, $this->dabase_name);
+                
+            }
+            
+            public function __destruct() {
+                mysql_close($this->connection);
             }
             
             public function insert($query)
             {
-                mysql_query($query, $this->connection);
+                mysql_query($query,  $this->connection);
             }
         }
 ?>

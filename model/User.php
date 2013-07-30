@@ -2,6 +2,7 @@
 
 class User
 {
+    private $idUser;
     private $userName;
     private $email;
     
@@ -11,6 +12,15 @@ class User
         $this->setEmail($email);
     }
     
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+    }
+    
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
     
     public function setEmail($email)
     {
