@@ -22,5 +22,10 @@
             {
                 mysql_query($query,  $this->connection);
             }
+            
+            public function result($query)
+            {
+                return mysql_query($query,  $this->connection);
+            }
         }
 ?>

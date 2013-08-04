@@ -9,10 +9,8 @@ div.box{
     width: 250px;
     height: 120px;
     font-family: Arial;
-}
-
-div.title
-{
+    background-image: url('../IMG/background-title.jpg');
+    background-repeat: repeat-x;
    
 }
 

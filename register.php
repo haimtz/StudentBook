@@ -1,7 +1,6 @@
 <?php
     include_once './Library/HTMLDefualt.php';
     include_once './Library/DataBase.php';
-    include_once './model/User.php';
 ?>
 
 <?php
@@ -67,9 +66,8 @@
 <?php
     }
  else {
-        
-        $isValidUser = TRUE;
-        
+     
+        $idUser = -1;
         $email = $_POST['email'];
         $username= $_POST['username'];
         $password = $_POST['password'];
@@ -80,8 +78,7 @@
             $_SESSION['msg'] = 'One of the fields are empty<br>';
             unset($_POST['username']);
             header("Location: register.php");
-            
-            $isValidUser = FALSE;
+            return;
         }
         else
         
@@ -90,23 +87,37 @@
             $_SESSION['msg'] = 'the password do not macth<br>';
             unset($_POST['username']);
             header("Location: register.php");
-            
-            $isValidUser = FALSE;
+            return;
             
         }
+        $db = new DataBase();
+        $result = $db->result("SELECT * FROM sbdb.users 
+                               WHERE username ='".$username."' OR email = '".$email."'");
         
-        if($isValidUser)
+        if($row = mysql_fetch_array($result))
         {
-            $db = new DataBase();
-
-            $query = 'INSERT INTO sbdb.users (username, email, password) VALUES ("'.$username.'", "'.$email.'", "'.$password.'")';
-            $db->insert($query);
-            
-            $user = new User($username, $email);
-            
-            $_SESSION['user'] = $user;
-            header("Location: home.php");
+            $_SESSION['msg'] = 'the username or email exist';
+            unset($_POST['username']);
+            header("Location: register.php");
+            return;
         }
+
+        $query = 'INSERT INTO sbdb.users (username, email, password) 
+            VALUES ("'.$username.'", "'.$email.'", "'.$password.'")';
+        $db->insert($query);
+        
+        $result = $db->result("SELECT iduser FROM sbdb.users WHERE username ='".$username."' AND email = '".$email."'");
+        
+        while($row = mysql_fetch_array($result))
+        {
+            $idUser = $row['iduser'];
+            
+        }
+            
+        $_SESSION['username'] = $username;
+        $_SESSION['iduser'] = $idUser;
+        
+        header("Location: home.php");
             
  }
     
