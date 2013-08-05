@@ -11,9 +11,28 @@ div.box{
     font-family: Arial;
     background-image: url('../IMG/background-title.jpg');
     background-repeat: repeat-x;
+    left: 30%;
+    top: 20%;
    
 }
 
+#logo
+{
+    top: 20px;
+    width: 80%;
+    height: 70px;
+    background-image: url('../IMG/background-logo.jpg');
+    
+    text-align: center;
+    border-radius: 30px 5px 30px 5px;
+    border: 2px black solid;
+    margin-bottom: 20px;
+}
+
+#imgLogo
+{
+    margin: 10px 10px 10px 10px;
+}
 input{
     margin: 2px 2px 2px 2px;
 }

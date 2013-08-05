@@ -9,7 +9,7 @@
     if(!isset($_POST['username']))
     {
 ?>
-
+<center>
     <h1>Register</h1>
 
     <div>
@@ -63,6 +63,7 @@
        }
        ?>
     </div>
+</center>
 <?php
     }
  else {

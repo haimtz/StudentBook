@@ -9,8 +9,16 @@ function start_page($title)
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=Cp1255">
 		<title>Student Book:: <?php echo $title; ?> </title>
+                <script type="text/javascript" src="./JS/jquery-2.0.3.js"></script>
+                 <link rel="stylesheet" href="./CSS/design.css" type="text/css">
 	</head>
 	<body>
+            <center>
+            <div id="logo">
+                <img src="./IMG/logo.png" id="imgLogo" >
+            </div>
+            </center>
+           
 <?php
 }
 ?>
