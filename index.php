@@ -6,31 +6,13 @@
 <?php
     start_page("Welcome");
     
-    if(!isset($_POST['username']))
+    if( isset($_SESSION['username']))
     {
-?>
-<div class="box">
-    Login
-    <br>
-    <br>
-    <form action="index.php" method="POST">
-        username: <input type="text" id="username" name="username" placeholder="Enter username"><br>
-        password: <input type="password" name="password" placeholder="Enter password"><br>
-        <input type="submit" value="Enter">
-    </form>
-</div>
-<div class="box">
-    Register<br>
-    <br>
-    <div>
-        If you are interested in becoming a member of our site and enter Link Start browsing
-    </div>
-    <a href="register.php">Register here</a>
-</div>
- <div id="myDiv"></div>
-<?php
+        header("Location: home.php");
     }
- else {
+    
+    if(isset($_POST['username']))
+    {
         $username = $_POST['username'];
         $password = $_POST['password'];
         
@@ -52,5 +34,26 @@
             return;
         }
     }
+?>
+<div class="box">
+    Login
+    <br>
+    <br>
+    <form action="index.php" method="POST">
+        username: <input type="text" id="username" name="username" placeholder="Enter username"><br>
+        password: <input type="password" name="password" placeholder="Enter password"><br>
+        <input type="submit" value="Enter">
+    </form>
+</div>
+<div class="box">
+    Register<br>
+    <br>
+    <div>
+        If you are interested in becoming a member of our site and enter Link Start browsing
+    </div>
+    <a href="register.php">Register here</a>
+</div>
+ <div id="myDiv"></div>
+<?php
     end_page();
 ?>

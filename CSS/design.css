@@ -1,5 +1,6 @@
 
-div.box{
+div.box
+{
     border: 1px  solid;
     border-radius: 25px;
     position: relative;
@@ -19,20 +20,70 @@ div.box{
 #logo
 {
     top: 20px;
-    width: 80%;
+    width: 750px;
     height: 70px;
     background-image: url('../IMG/background-logo.jpg');
-    
     text-align: center;
     border-radius: 30px 5px 30px 5px;
     border: 2px black solid;
     margin-bottom: 20px;
 }
 
+#divLogo
+{
+    float: right;
+    position: relative;
+}
+
+#divName
+{
+    left: 40px;
+    top: 20px;
+    text-align: center;
+    float: left;
+    position: relative;
+    font-style: italic;
+    font-variant: normal;
+    color: white;
+    font-size: larger;
+}
+
 #imgLogo
 {
     margin: 10px 10px 10px 10px;
 }
-input{
+
+input
+{
     margin: 2px 2px 2px 2px;
+}
+
+#divList
+{
+    float: left;
+    position: relative;
+    border: 1px black solid;
+    margin: 2px 2px 2px 2px;
+    width: 25%;
+    height: 100px;
+}
+
+#divCenter
+{
+    float: left;
+    position: relative;
+    border: 1px black solid;
+    margin: 2px 2px 2px 2px;
+    width: 48%;
+    height: 100px;
+}
+
+#divMenu
+{
+    float: right;
+    position: relative;
+    border: 1px black solid;
+    margin: 2px 2px 2px 2px;
+    width: 25%;
+    height: 100px;
 }

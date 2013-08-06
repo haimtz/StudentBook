@@ -3,6 +3,7 @@
 function start_page($title)
 {
     session_start();
+    
     ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
 	<html>
@@ -15,15 +16,30 @@ function start_page($title)
 	<body>
             <center>
             <div id="logo">
-                <img src="./IMG/logo.png" id="imgLogo" >
+                <div id="divLogo"><img src="./IMG/logo.png" id="imgLogo" ></div>
+                <?php 
+                if(isset($_SESSION['username']))
+                {
+                ?>
+                <div id="divName"> <?php echo 'Hello: '.$_SESSION['username'];?></div>
+                <?php
+                }
+                ?>
             </div>
             </center>
            
 <?php
 }
 ?>
-
 <?php
+
+    function menu()
+    {
+        ?>
+            <div id="divMenu">
+            </div>
+            <?php
+    }
     function end_page()
     {
         ?>
