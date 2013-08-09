@@ -10,7 +10,8 @@
             
             public function __construct() {
                 
-                $this->connection = mysql_connect($this->host, $this->username, $this->password, $this->dabase_name);
+                $this->connection = mysql_connect($this->host, $this->username, $this->password);
+                mysql_select_db($this->dabase_name);
                 
             }
             
