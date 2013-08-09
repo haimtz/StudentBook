@@ -35,7 +35,7 @@ $result = -1;
                 $content = $_POST['content'];
                 
                 $db->insert("INSERT INTO messages (touser, fromuser, subject, content, recive) 
-                             VALUES (".$id_send_to.", ".$iduser.", '".$subject."', '".$content."', NOW());");
+                             VALUES (".$id_send_to.", ".$iduser.", '".$subject."', '".$content."', NOW())");
                 unset($_POST['username']);
                 
                 ?>
