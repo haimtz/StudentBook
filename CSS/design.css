@@ -74,7 +74,6 @@ input
     border: 1px black solid;
     margin: 2px 2px 2px 2px;
     width: 48%;
-    height: 100px;
     text-align: center;
 }
 
@@ -99,8 +98,26 @@ li
     margin-top: 10px;
 }
 
-#myWall
+#wallMessage
 {
-    border: 3px black solid;
-    height: 20px;
+    width: 80%;
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#divSendMessage
+{
+    float: left;
+    margin: 2px 2px 2px 2px;
+    border: black solid thin;
+}
+
+#inbox
+{
+    float: right;
+    margin: 2px 2px 2px 2px;
+    border: black solid 1px;
 }
