@@ -110,7 +110,7 @@ li
 
 #divSendMessage
 {
-    float: left;
+    float: right;
     margin: 2px 2px 2px 2px;
     border: black solid thin;
 }
@@ -120,4 +120,11 @@ li
     float: right;
     margin: 2px 2px 2px 2px;
     border: black solid 1px;
+    text-align: center;
+    width: 500px;
+}
+
+h2
+{
+    
 }

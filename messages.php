@@ -30,7 +30,6 @@ $result = -1;
             if($result != NULL && $row = mysql_fetch_assoc($result))
             {
                 $id_send_to = $row['iduser'];
-                echo 'ID user'.$id_send_to;
                 $subject = $_POST['subject'];
                 $content = $_POST['content'];
                 
@@ -106,7 +105,25 @@ $result = -1;
 
 <!-- received messages -->
 <div id="inbox">
-    
+    <h2>inbox</h2>
+    <?php
+        $result = $db->result("SELECT users.username AS sendby, messages.subject, messages.content
+                               FROM messages INNER JOIN users
+                               WHERE users.iduser = messages.fromuser AND messages.touser = ".$iduser." 
+                               ORDER BY messages.recive DESC");
+        
+        while($row = mysql_fetch_array($result))
+        {
+            ?>
+                <div id="div_subject">
+                    Subject: <?php echo $row['subject']; ?>
+                </div>
+                <div id="div_from">
+                    From: <?php echo $row['send'];?>
+                </div>
+            <?php
+        }
+    ?>
 </div>
 
 <?php
