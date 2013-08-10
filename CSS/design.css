@@ -124,7 +124,46 @@ li
     width: 500px;
 }
 
-h2
+.div_message
 {
-    
+    border: black solid 1px;
+    text-align: left;
+    font-family: sans-serif;
+    margin: 10px 10px 10px 10px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+.div_message_1
+{
+    border: black solid 1px;
+    text-align: left;
+    font-family: sans-serif;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.div_subject
+{
+    margin: 10px 5px 10px 10px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.div_from
+{
+    margin: 5px 10px 5px 5px;
+    font-family: sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: left;
+}
+
+.div_content
+{
+    margin: 5px 10px 5px 5px;
+    font-family: sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: left;
 }

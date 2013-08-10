@@ -6,14 +6,14 @@
 <?php
 start_page("Messages");
 menu();
-//if(!isset($_SESSION['username']))
-//{
-//    header("Location: index.php");
-//}
+if(!isset($_SESSION['username']))
+{
+    header("Location: index.php");
+}
 
 #cuurent user
-$username = "wer"; //$_SESSION['username'];
-$iduser = 1; //$_SESSION['iduser'];
+$username = $_SESSION['username'];
+$iduser = $_SESSION['iduser'];
 
 #initialize  database connection
 $db = new DataBase();
@@ -112,16 +112,24 @@ $result = -1;
                                WHERE users.iduser = messages.fromuser AND messages.touser = ".$iduser." 
                                ORDER BY messages.recive DESC");
         
+        $isColor = true;
         while($row = mysql_fetch_array($result))
         {
             ?>
-                <div id="div_subject">
-                    Subject: <?php echo $row['subject']; ?>
-                </div>
-                <div id="div_from">
-                    From: <?php echo $row['send'];?>
-                </div>
+             <div class=<?php  echo $isColor ? "div_message" : "div_message_1"; ?>>
+                        <div class="div_subject">
+                            Subject: <?php echo $row['subject']; ?>
+                        </div>
+                        <div class="div_from">
+                            From: <?php echo $row['sendby'];?>
+                        </div>
+                        <div class="div_content">
+                            Content: <?php echo $row['content'];?>
+                        </div>
+            </div>
             <?php
+            
+            $isColor = !$isColor;
         }
     ?>
 </div>

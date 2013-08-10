@@ -39,7 +39,7 @@
     Login
     <br>
     <br>
-    <form action="index.php" method="POST">
+    <form action="login.php" method="POST">
         username: <input type="text" id="username" name="username" placeholder="Enter username"><br>
         password: <input type="password" name="password" placeholder="Enter password"><br>
         <input type="submit" value="Enter">
