@@ -20,7 +20,7 @@
                         username:
                     </td>
                     <td>
-                        <input type="text" name="username" placeholder="username" required="username">
+                        <input type="text" name="username" placeholder="username" required>
                     </td>
                 </tr>
                 <tr>
@@ -28,7 +28,7 @@
                         email:
                     </td>
                     <td>
-                        <input type="email" name="email" placeholder="email" >
+                        <input type="email" name="email" placeholder="email" required>
                     </td>
                 </tr>
                 <tr>
@@ -36,7 +36,7 @@
                         password:
                     </td>
                     <td>
-                        <input type="password" name="password" required="password">
+                        <input type="password" name="password" required>
                     </td>
                 </tr>
                 <tr>

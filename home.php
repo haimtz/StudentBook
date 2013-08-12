@@ -8,7 +8,7 @@ start_page("home page");
 menu();
 if(!isset($_SESSION['username']))
 {
-    header("Location: index.php");
+    header("Location: login.php");
 }
 ?>
 
