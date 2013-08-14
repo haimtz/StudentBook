@@ -8,12 +8,12 @@
     start_page("search");
     menu();
     
-//if(!isset($_SESSION['username']))
-//{
-//    header("Location: login.php");
-//}
-$username = "wer";//$_SESSION['username'];
-$iduser = 1; //$_SESSION['iduser'];
+if(!isset($_SESSION['username']))
+{
+    header("Location: login.php");
+}
+$username = $_SESSION['username'];
+$iduser = $_SESSION['iduser'];
 
 $db = new DataBase();
 ?>

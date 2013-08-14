@@ -36,7 +36,7 @@
                         password:
                     </td>
                     <td>
-                        <input type="password" name="password" required>
+                        <input type="password" placeholder="Enter password" name="password" required>
                     </td>
                 </tr>
                 <tr>
@@ -74,9 +74,30 @@
         $password = $_POST['password'];
         $confirm = $_POST['confirm'];
         
-        if(trim($username) == '' || trim($email) == '' || trim($password)== '')
+        $regUsername = '/^[a-zA-Z0-9_]+$/';
+        $regEmail = '/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/';
+        
+        if(!preg_match($regUsername, $username))
         {
-            $_SESSION['msg'] = 'One of the fields are empty<br>';
+            ?>
+                <script> alert("username not valid");</script>
+            <?php
+            exit();
+        }
+        
+        if(!preg_match($regEmail, $email))
+        {
+            ?>
+                <script> alert("email not valid");</script>
+            <?php
+            exit();
+        }      
+        
+        
+        if(trim($password)== '')
+        {
+                
+            $_SESSION['msg'] = 'the password is empty<br>';
             unset($_POST['username']);
             header("Location: register.php");
             return;

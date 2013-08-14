@@ -6,17 +6,17 @@ include_once './Library/DataBase.php';
 <?php
 start_page("home page");
 menu();
-//if(!isset($_SESSION['username']))
-//{
-//    header("Location: login.php");
-//}
+if(!isset($_SESSION['username']))
+{
+    header("Location: login.php");
+}
 ?>
 
 <?php
 $actionPage = "home.php";
 #cuurent user
-$username = "wer";//$_SESSION['username'];
-$iduser = 1; //$_SESSION['iduser'];
+$username = $_SESSION['username'];
+$iduser = $_SESSION['iduser'];
 
 #other user
 $other_iduser = -1;
