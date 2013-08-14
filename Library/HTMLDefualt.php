@@ -39,10 +39,10 @@ function start_page($title)
         ?>
             <div id="divMenu">
                 <menu>
-                    <li onclick="clickMenu('Home')">Home</a></li>
-                    <li onclick="clickMenu('Message')">Message</li>
-                    <li onclick="clickMenu('Search')">Search</li>
-                    <li onclick="">logout</li>
+                    <li class="borderGreen" onclick="clickMenu('Home')">Home</a></li>
+                    <li class="borderGray"  onclick="clickMenu('Message')">Message</li>
+                    <li class="borderGreen" onclick="clickMenu('Search')">Search</li>
+                    <li class="borderGray"  onclick="">logout</li>
                 </menu>
             </div>
             <?php

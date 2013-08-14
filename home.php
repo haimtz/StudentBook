@@ -6,17 +6,17 @@ include_once './Library/DataBase.php';
 <?php
 start_page("home page");
 menu();
-if(!isset($_SESSION['username']))
-{
-    header("Location: login.php");
-}
+//if(!isset($_SESSION['username']))
+//{
+//    header("Location: login.php");
+//}
 ?>
 
 <?php
 $actionPage = "home.php";
 #cuurent user
-$username = $_SESSION['username'];
-$iduser = $_SESSION['iduser'];
+$username = "wer";//$_SESSION['username'];
+$iduser = 1; //$_SESSION['iduser'];
 
 #other user
 $other_iduser = -1;
@@ -99,21 +99,29 @@ $result = -1;
 
 <!-- users list -->
 <div id="divList">
-    the members in this group
     <?php
         
         $result = $db->result("SELECT iduser, username FROM users WHERE iduser != ".$iduser);
         ?>
-        <ol>
+        <table>
+            <tr>
+                <th>
+                    The Members
+                </th>
+            </tr>
         <?php
         while($row = mysql_fetch_array($result))
         {
             ?>
-            <li onclick="goToUser(<?php echo $row['iduser'];?>)"><?php echo $row['username'];?></li>
+            <tr>
+                <td>
+            <p onclick="goToUser(<?php echo $row['iduser'];?>)"><?php echo $row['username'];?></p>
+                </td>
+            </tr>
             <?php
         }
         ?>
-        </ol>
+        </table>
         <?php
     ?>
 </div>

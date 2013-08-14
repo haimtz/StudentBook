@@ -84,7 +84,6 @@ input
     border: 1px black solid;
     margin: 2px 2px 2px 2px;
     width: 25%;
-    height: 100px;
 }
 
 li
@@ -166,4 +165,73 @@ li
     font-style: oblique;
     font-weight: bold;
     text-align: left;
+}
+
+menu li
+{
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 20px;
+    line-height: 20px;
+    position: relative;
+    overflow: hidden;
+
+    -webkit-transition: all 0.2s linear;
+}
+
+menu .borderGreen
+{
+    border-left: 2px green solid;
+    border-radius: 5px;
+}
+
+menu .borderGray
+{
+    border-left: 2px gray solid;
+    border-radius: 5px;
+}
+
+menu li:hover
+{
+    background-color: lightgrey;
+}
+
+#innerDiv
+{
+    width: 80%;
+    padding: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+#innerDiv tr th
+{
+    width: 100px;
+    text-align: center;
+    background-color: lightgray;
+    
+}
+
+p
+{
+    cursor: pointer;
+}
+
+tbody tr td {
+  font-family: 'Open Sans', sans-serif;
+  font-weight:400;
+  color:#5f6062;
+  font-size:13px;
+  padding:20px 20px 20px 20px;
+  border-bottom:1px solid #e0e0e0;
+  
+}
+
+tbody tr:nth-child(2n) {
+  background:#f0f3f5;
 }

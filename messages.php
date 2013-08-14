@@ -8,7 +8,7 @@ start_page("Messages");
 menu();
 if(!isset($_SESSION['username']))
 {
-    header("Location: index.php");
+    header("Location: login.php");
 }
 
 #cuurent user
