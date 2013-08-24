@@ -9,3 +9,28 @@ CREATE TABLE `users` (
   `password` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idusers`)
 );
+
+
+<!-- Create wall Table -->
+
+CREATE TABLE `wall` (
+  `idwall` int(11) NOT NULL AUTO_INCREMENT,
+  `content` varchar(45) NOT NULL,
+  `fromuser` int(11) NOT NULL,
+  `touser` int(11) NOT NULL,
+  `publish` datetime NOT NULL,
+  PRIMARY KEY (`idwall`)
+);
+
+
+<!--- Create messages Table -->
+
+CREATE TABLE `messages` (
+  `idmessage` int(11) NOT NULL AUTO_INCREMENT,
+  `touser` int(11) DEFAULT NULL,
+  `fromuser` int(11) DEFAULT NULL,
+  `subject` varchar(45) DEFAULT NULL,
+  `content` varchar(250) DEFAULT NULL,
+  `recive` datetime DEFAULT NULL,
+  PRIMARY KEY (`idmessage`)
+);
